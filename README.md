@@ -1,17 +1,58 @@
 # Web-Bookstore-API-Refactor-v1
 
 ## 1. Introduction
-This project is a **web application simulating an online bookstore management and sales system**, developed using **ASP.NET Core MVC (C#)** and **MySQL**.
+ A refactored version of [Web-bookstore] (httpsL//github.com/oanhngy/Web-Bookstore) - migrated from **ASP.NET Core MVC** to a **RESTful Web API** with layered atchitecture (3-Tier), JWT authentication, repository pattern, global exception handling, logging and unit tests.
 
-The application supports both **customer-facing features** (browsing books, shopping cart, ordering) and **administration features** (managing books, categories, orders, and revenue reports), aiming to practice web application development following the MVC pattern.
+ **Original project**: ASP.NET Core MVC + MySQL + Razor Views
+ **This project**: ASP.NET Core Web API + MySQL + Layered Architecture
 
-> **Note:** This is a rebuild of an original project that was lost (Models, Views, and SQL Server database were missing).
-> The rebuild focused on **backend development** (controllers, models, database, business logic) as the primary learning objective.
-> Frontend styling (Bootstrap UI) was handled with the assistance of **Claude AI (Claude Code)**.
+---
+## 2. My Role
+This project focused entirely on **backend development**. The frontend from the original MVC project is kept as-is and not part of this refactor scope.
+
+Responsibilities:
+- Analyzed the original MVC codebase and identified architectural pan points (fat controller, no service layer, no DI abstraction, no tests)
+- Designed the 3-tier layered architecture and defined project boudaries
+- Migrated all business logic from Controller into Service classes
+- Replaced cookie0based ASP.NET Identity auth with JWT Bearer authentication
+- Added global exception handling middleware and structured logging via ILogger<T>
+- Wrote unit test for Service layer using xUnit and Moq
+
+**AI-Assisted development**: Claude Code and ChatGPT were used as assistants for generating boilerplate, debugging, and pattern suggestions. All architectural decisions and business logic were written and verified by me.
+
+---
+## 3. Target Architecture
+```
+┌──────────────────────────────┐
+│      Presentation Layer      │  BookstoreWeb.API
+│      (Controllers only)      │  HTTP in/out, no business logic
+├──────────────────────────────┤
+│      Application Layer       │  BookstoreWeb.Application
+│   (Services + Interfaces)    │  Business logic, DTOs
+├──────────────────────────────┤
+│    Infrastructure Layer      │  BookstoreWeb.Infrastructure
+│  (Repositories + EF Core)    │  Data access, DbContext, Migrations
+└──────────────────────────────┘
+              ↓
+       MySQL Database
+```
+
+**Dependency rule:** Each layer only depends on the layer directly below it, always through interfaces — never concrete classes.
+
+---
+## 4. Key improvements
+- Architecture: Fat controller -> 3-tier layered
+- Business logic:L Scattered inside Controller -> Centralized in Service layer
+- Data access: DbContext call directly in Controllers -> Repository pattern
+- Authentication: Cookie-based -> JWT Bearer (stateless)
+- DI: Only DbContext injected -> Full interface-based DI for all Services and Repositories
+- Exception handling: None -> Global middleware, consistent ProblemDetails response
+- Logging: Config exited but unused -> ILogger<T> injected in all Services
+- Unit test: None -> xUnit + Moq covering Service layer business logic
 
 ---
 
-## 2. Main Features
+## 5. Main Features
 
 ### User Management
 - Role-based authorization (**Admin** / **Customer**)
@@ -43,98 +84,111 @@ The application supports both **customer-facing features** (browsing books, shop
 - Revenue report with bar chart (filter by day / week / month / year)
 
 ---
+## 6. Project Structure
+### Before (MVC - single project)
+```
+Web-Bookstore/
+├── Controllers/          # Fat controllers — business logic + DB access + View return
+├── Models/               # EF Core entities
+├── Views/                # Razor Views
+├── Data/                 # BookstoreContext, SeedData
+├── Migrations/
+└── wwwroot/
+```
 
-## 3. Technologies Used
-- **Programming Languages:** C#, HTML, CSS
-- **Framework:** ASP.NET Core MVC 6
-- **Database:** MySQL (database script included: `dulieuBookstoreDb.sql`)
-- **Tools & Libraries:** VS Code, Entity Framework Core, Bootstrap 5, ASP.NET Identity, X.PagedList
+### After (this project - 4 projects)
+
+```
+Web-Bookstore-API-Refactor-v1/
+├── BookstoreWeb.API/
+│   ├── Controllers/      # HTTP only — inject Service, return ActionResult
+│   ├── Middleware/        # GlobalExceptionHandlingMiddleware
+│   └── Program.cs        # DI registration, JWT config, middleware pipeline
+│
+├── BookstoreWeb.Application/
+│   ├── Services/         # ProductService, OrderService, CartService, ...
+│   ├── Interfaces/       # IProductService, IOrderService, ...
+│   └── DTOs/             # Request/Response DTOs
+│
+├── BookstoreWeb.Infrastructure/
+│   ├── Repositories/     # ProductRepository, OrderRepository, ...
+│   ├── Data/             # BookstoreContext, SeedData, Migrations
+│   └── DependencyInjection.cs
+│
+└── BookstoreWeb.Tests/
+    └── Services/         # Unit tests — xUnit + Moq
+```
 
 ---
+## 7. Technologies Used
+- Language: C#
+- Framework: ASP.NEt Core Web API (.NET 6)
+- Database: MySQL - Pomelo EF Core provider
+- ORM: Entity Framework Core (code first)
+- Authentication: JWT Bearer
+- Testing: xUnit, Moq
+- Logging: ILogger<T>
+- Tools: VS Code, Claude Code, Postman
 
-## 4. Project Structure
-- **Controllers/** — Handle user requests and application logic
-- **Models/** — Define data entities: Product, Category, Order, OrderDetail, ProductImage
-- **Views/** — User interface built with Razor Views (MVC)
-- **Data/** — BookstoreContext (EF Core DbContext) and SeedData
-- **Migrations/** — Entity Framework Core migrations
-- **wwwroot/** — Static files (CSS, JavaScript, uploaded images)
+## 8. Installation & Run Guide
 
----
+### Prerequisites
+- .NET 6 SDK
+- MySQL Server
+- VS Code (or any editor)
 
-## 5. Installation & Run Guide
+### Steps
 
-1. Clone the project from GitHub
-2. Open the project using **VS Code** or any editor
-3. Import `dulieuBookstoreDb.sql` into **MySQL** to initialize the database schema and seed data
-4. Update the connection string in `appsettings.json`:
+1. Clone the repository
+   ```bash
+   git clone https://github.com/oanhngy/Web-Bookstore-API-Refactor-v1.git
+   cd Web-Bookstore-API-Refactor-v1
+   ```
+
+2. Import the database
+   ```bash
+   # Import dulieuBookstoreDb.sql into MySQL
+   mysql -u root -p < dulieuBookstoreDb.sql
+   ```
+
+3. Update connection string and JWT config in `BookstoreWeb.API/appsettings.json`
    ```json
    "ConnectionStrings": {
      "DefaultConnection": "Server=localhost;Database=BookstoreDb;User=root;Password=yourpassword;"
+   },
+   "Jwt": {
+     "SecretKey": "your-secret-key-here",
+     "Issuer": "BookstoreAPI",
+     "Audience": "BookstoreClient",
+     "ExpiresInMinutes": 60
    }
    ```
-5. Run the project:
+
+4. Run EF Core Migrations
    ```bash
+   cd BookstoreWeb.Infrastructure
+   dotnet ef database update --startup-project ../BookstoreWeb.API
+   ```
+
+5. Run the API
+   ```bash
+   cd BookstoreWeb.API
    dotnet watch
    ```
-6. Access the application at `https://localhost:7001`
-7. A default Admin account is automatically created on first run:
+
+6. API is available at `https://localhost:7001`
+
+7. Default Admin account (seeded on first run):
    - **Email:** `admin@gmail.com`
    - **Password:** `Abc@123456`
 
----
-
-## 6. Technical Highlights
-- Developed using ASP.NET Core MVC following the Model–View–Controller pattern
-- Implemented role-based authentication and authorization for **Admin** and **Customer**
-- Used Entity Framework Core for database interaction and migrations
-- Migrated database from SQL Server to MySQL using Pomelo EF Core provider
-- Applied CRUD operations, searching, filtering, and pagination (X.PagedList)
-- Primary image selection and image deletion for product management
-- Revenue report powered by Chart.js with dynamic API endpoint
-- Responsive UI built with Bootstrap 5 and Bootstrap Icons
+### Run Unit Tests
+```bash
+cd BookstoreWeb.Tests
+dotnet test
+```
 
 ---
 
-## 7. What I Learned
-- Building web applications using ASP.NET Core MVC
-- Working with Entity Framework Core and MySQL
-- Implementing authentication, authorization, and role management with ASP.NET Identity
-- Designing and managing relational databases
-- Structuring scalable and maintainable web projects
-- Understanding real-world workflows of an e-commerce system
-- Migrating databases across different providers (SQL Server → MySQL)
-
----
-
-## 8. Screenshots
-
-### Customer Section
-
-Home page
-
-Book details
-
-Cart
-
-Checkout
-
-My Orders
-
-### Common Features
-
-Login
-
-Register
-
-### Admin Section
-
-Dashboard
-
-Product Management
-
-Order Management
-
-Revenue Report
-
-Category Management
+## What I Learned
+(later)
