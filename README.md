@@ -122,7 +122,7 @@ Web-Bookstore-API-Refactor-v1/
 ---
 ## 7. Technologies Used
 - Language: C#
-- Framework: ASP.NEt Core Web API (.NET 6)
+- Framework: ASP.NEt Core Web API (.NET 8)
 - Database: MySQL - Pomelo EF Core provider
 - ORM: Entity Framework Core (code first)
 - Authentication: JWT Bearer
