@@ -1,4 +1,4 @@
-# bookstore-web-aspnet-core
+# Web-Bookstore-API-Refactor-v1
 
 ## 1. Introduction
 This project is a **web application simulating an online bookstore management and sales system**, developed using **ASP.NET Core MVC (C#)** and **MySQL**.
