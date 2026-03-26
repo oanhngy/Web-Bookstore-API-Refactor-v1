@@ -3,105 +3,150 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Purpose
-Purpose of this project is learning
-- The goal is understanding and skill improvement, not just finishing the implement quickly
-- Explanations, reasoning and learning value are more important than fast code generation
+This is a **learning project**, understanding and skill improvement matter more than finishing fast.
+- Guide me like a **senior developer teaching a fresher developer**
+- For each task, explain: what are we doing, why, what options exits, trade-offs, which file+line to check
+- Show how to commit to GitHub and what the commit message say
+- After each step, ask for my confirmation before moving on
 
-## Workflow
-- Guide me like a senior developer teaching a fresher developer
-- Explain things step by step
-- Use very simple English and ELI5 style when posible
+**Code changes:**
+- Do NOT write, edit or refactor any code until I explicitly approve
+- If code changes are needed, propose the plan as simple bullet points first
+- Wait for my approval before applying any change
+- When multiple valid approaches exist, recommend one and explain why
 
-For each task, first explain:
-    - what are we doing
-    - why are we doing this
-    - what options exist
-    - trade-offs of each option
-    - what line anf file should I check
-After each step, ask for my opinion or confirmation before moving on, show how to commit to github and what should in the comment
-
-Code changes:
-- Do not write, edit or refactor code until I explicitly approve
-- Do not make implementation changes silently
-- If code changes are needed, first propose the plan in simple bullet point
-- Wait for my approval before applying any code change
-
-Decision making:
-- When multiple valid approaches exist, recommend one approach
-- Also explain ehy it is recommended
-
-General behavior:
-- Prefer teaching and reasoning over jumping straight to the answer
-- Help me understand how to think about the problem, not only how to solve it
-
-## Coding rules
-- Every block of logic must have a comment above explaining what it dose (not how)
-- Follow clean code practices whenever possible, every function need comment
-- Keep code simple, readable and easy to understand
+**Coding rules:**
+- Every function and logic block must have a comment explaining what it does (not how)
 - Prefer clear naming over short or clever code
+- Keep code simple, readable and easy to understand
 - Avoid unnecessary complexity
 
-## Commands
+---
+## Refactor Goal
+Migrating from **ASP.NET Core MVC** to **Web API with 3-tier layered architecture**.
 
-```bash
-dotnet run                              # Run the app (https://localhost:7001)
-dotnet build                            # Build
-dotnet ef migrations add <Name>         # Add EF migration
-dotnet ef database update               # Apply migrations to DB
+**Problem with original codebase:**
+- Fat controllers — business logic, DB access, and response all in one place
+- No service layer, no repository pattern, no DI abstraction
+- Cookie-based auth — not compatible with API clients
+- No logging, no global exception handling, no unit tests
+
+**Target solution structure:**
+```
+BookstoreWeb.API/             Controllers, Middleware, Program.cs
+BookstoreWeb.Application/     Services, Interfaces, DTOs
+BookstoreWeb.Infrastructure/  Repositories, Data, DependencyInjection.cs
+BookstoreWeb.Tests/           xUnit + Moq
 ```
 
-No test project exists in this repository.
+**Dependency rule (never violate):**
+```
+API → Application → Infrastructure → Database
+```
+- Controllers must NOT inject `DbContext` directly
+- Services must NOT reference any EF Core types
+- Each layer depends only on the layer below it, always through interfaces
 
-## Database Setup
+**Refactor roadmap:**
+- [x] Phase 1 — Analyze codebase, identify pain points
+- [ ] Phase 2 — Design solution structure
+- [ ] Phase 3 — Service layer + Interfaces + DI
+- [ ] Phase 4 — Repository pattern
+- [ ] Phase 5 — JWT auth + Global Exception Middleware + Logging
+- [ ] Phase 6 — Unit tests
+- [ ] Phase 7 — EF Migration + end-to-end testing
 
-1. Import `dulieuBookstoreDb.sql` into SQL Server to initialize the database with seed data.
-2. Update the connection string in `appsettings.json` if needed (default: `Server=localhost;Database=BookstoreDb;Trusted_Connection=True;TrustServerCertificate=True;`).
-3. On first run, `SeedData.Initialize` creates the `Admin` role only — the admin user must be manually created in the database and assigned to that role.
+Always check which phase is active before suggesting code changes. Do not skip ahead.
 
-> Note: The `InitialCreate` migration has an empty `Up()` — the schema is bootstrapped via `dulieuBookstoreDb.sql`, not migrations.
+---
 
-## Architecture
+## Naming Conventions
+Priority: **clarity over brevity**. A longer name that is immediately clear is better than a short name that requires guessing.
 
-- **ASP.NET Core 6 MVC** with SQL Server via Entity Framework Core. No repository pattern — controllers inject `BookstoreContext` directly.
-- Need to change database from SQL Server to MySQL
-- Lack of folder Views/, Models/, unit testing...
+| Type | Pattern | Example |
+|---|---|---|
+| Interface | `I` prefix | `IProductService`, `IOrderRepository` |
+| Service | `[Entity]Service` | `ProductService`, `OrderService` |
+| Repository | `[Entity]Repository` | `ProductRepository`, `OrderRepository` |
+| DTO Request | `[Action][Entity]Request` | `CreateProductRequest`, `UpdateOrderStatusRequest` |
+| DTO Response | `[Entity]Response` | `ProductResponse`, `OrderResponse` |
+| Middleware | `[Name]Middleware` | `ExceptionHandlingMiddleware` |
+| Test class | `[Entity]ServiceTests` | `ProductServiceTests` |
 
-### Data Model
-- `Product` → belongs to `Category`, has many `ProductImage`
-- `Order` → belongs to `IdentityUser` (via `UserID`), has many `OrderDetail`
+**Repository method naming rule:** `[Verb][Noun][Condition]Async`
+```csharp
+GetByIdAsync(int id)
+GetAllAsync()
+GetByCategoryIdAsync(int categoryId)
+SearchByNameAsync(string keyword)
+AddAsync(Product product)
+UpdateAsync(Product product)
+DeleteAsync(int id)
+ExistsAsync(int id)
+```
+Never use vague names like `FindAsync`, `GetAsync`, `SaveAsync`.
+
+**Test method naming:** `MethodName_Scenario_ExpectedResult`
+```
+CancelOrderAsync_WhenStatusIsCompleted_ShouldThrowException
+GetByIdAsync_WhenProductNotFound_ShouldThrowNotFoundException
+```
+
+---
+## Key Technical Decisions
+
+**DTOs:** Separate Request / Response DTOs. Manual mapping — no AutoMapper. Never return EF entity from Controller.
+
+**Custom exceptions:**
+```
+NotFoundException   → HTTP 404
+ValidationException → HTTP 400
+ConflictException   → HTTP 409
+Any other Exception → HTTP 500
+```
+Mapping lives in `ExceptionHandlingMiddleware` only. Services only `throw` — never set HTTP status codes.
+
+**Error response format:** ProblemDetails (RFC 7807)
+```json
+{ "status": 404, "title": "Not Found", "detail": "Product with id 99 was not found" }
+```
+
+**JWT:** HS256 algorithm. Claims: `sub` (userId), `email`, `jti` (Guid.NewGuid()), `role`. Expiry: 60 minutes. No refresh token. SecretKey min 32 chars, always read from `appsettings.json`.
+
+**Logging:** `ILogger<T>` injected in all Services. Use `Information` for normal flow, `Warning` for unexpected situations, `Error` with exception for failures.
+
+**Unit tests:** xUnit + Moq. Test files mirror Service structure under `Tests/Services/`. Pattern: Arrange → Act → Assert. Mock Repository interfaces — never use real DbContext. Focus on Services with business logic (`OrderService`, `CartService`, `ProductService`). Skip Repository and Controller tests.
+
+---
+## Original Data Model (reference — unchanged in refactor)
+- `Product` → belongs to `Category` (n-1), has many `ProductImage` (1-n)
+- `Order` → belongs to `IdentityUser` via `UserID`, has many `OrderDetail` (1-n)
 - `OrderDetail` → belongs to `Order` and `Product`
-- `BookstoreContext` extends `IdentityDbContext<IdentityUser>` (ASP.NET Identity tables co-located)
-- A separate `Users` DbSet exists alongside `AspNetUsers` — do not confuse the two
+- Cart = `Order` with `Status = "New"` — not a separate entity
+- Status flow: `New` → `Checked Out` → `Confirmed` → `Completed` / `Cancelled`
+- `BookstoreContext` extends `IdentityDbContext<IdentityUser>`
 
-### Order / Cart Lifecycle
-The shopping cart is **not a separate entity** — it is an `Order` with `Status = "New"`. Status transitions:
+---
+## Commands
+```bash
+dotnet run --project BookstoreWeb.API
+dotnet build
+dotnet test
+dotnet test --collect:"XPlat Code Coverage"
+dotnet ef migrations add <n> --project BookstoreWeb.Infrastructure --startup-project BookstoreWeb.API
+dotnet ef database update --project BookstoreWeb.Infrastructure --startup-project BookstoreWeb.API
 ```
-"New" (cart) → "Checked Out" → "Confirmed" → "Completed"
-                                            → "Cancelled"
+
+---
+## Phase Reference Files
+
+When starting a new phase, tell Claude Code to read the corresponding file:
+> "Read docs/phase-3-service.md before we start"
+
 ```
-- `CartController` manages the "New" order (add, remove, update quantity, checkout)
-- `CartController.Checkout` transitions to "Checked Out" and renders the checkout form
-- `OrderController.ConfirmOrder` captures delivery info (FullName, Email, Phone, Address, Note, PaymentMethod) onto the Order row and transitions to "Confirmed"
-- `OrderController.ViewOrderStatus` shows orders with `Status != "New"` to the customer
-
-### Controllers
-| Controller | Purpose |
-|---|---|
-| `ProductController` | Public book listing (search, category filter, sort, pagination) and detail view |
-| `CartController` | Cart management — requires `[Authorize]` |
-| `OrderController` | Customer order status and cancellation |
-| `AccountController` | Register, Login, Logout via ASP.NET Identity |
-| `AdminController` | Admin CRUD for products/orders and revenue API — requires `[Authorize(Roles = "Admin")]` |
-
-### Roles
-- **Admin** — `AdminController` is fully protected. After login, admins redirect to `https://localhost:7001/Admin/Dashboard`.
-- **Customer** — assigned automatically on registration.
-
-### Default Route
-`{controller=Product}/{action=Index}/{id?}` — home page is `ProductController.Index` (12 items/page via `X.PagedList`).
-
-### Revenue API
-`GET /Admin/GetRevenueData?timeFrame={day|week|month|year}` returns JSON used by a Chart.js chart in the `ViewRevenue` view. Only counts `Status = "Completed"` orders.
-
-### Image Upload
-Product images are saved to `wwwroot/images/` with only the filename stored in `ProductImage.ImagePath`. Both `IsPrimary` and `ImageType` fields exist; the listing page filters on `IsPrimary == true && ImageType == "main"`.
+docs/phase-2-solution-design.md     File structure, Solution design
+docs/phase-3-service.md             Service layer, Interface, DI
+docs/phase-4-repository.md          Repository pattern
+docs/phase-5-jwt.md                 JWT, Middleware, Logging
+docs/phase-6-testing.md             Unit tests, coverage
+```
