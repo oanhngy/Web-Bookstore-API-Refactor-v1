@@ -10,7 +10,7 @@ This phase produces the blueprint that all subsequent phases follow.
 ```
 BookstoreWeb.API/
 │   Purpose: Entry point. Handle HTTP only.
-│   Contains: Controllers, Middleware, Program.cs, appsettings.json
+│   Contains: Controllers, Middleware, Program.cs, appsettings.json, Swagger config
 │   Must NOT: contain business logic or reference DbContext directly
 │
 BookstoreWeb.Application/
@@ -57,6 +57,20 @@ IProductRepository
 IOrderRepository
 ICategoryRepository
 ```
+
+---
+## Developer Tools
+
+**Swagger UI** replaces Razor Views as the visual interface.
+- Package: `Swashbuckle.AspNetCore`
+- Enabled: Development environment only
+- URL: `https://localhost:7001/swagger`
+- Purpose: Explore endpoints, test requests/responses directly in browser
+
+**Postman** is used for structured API testing:
+- Test auth flows (register → login → get token → call protected endpoint)
+- Test edge cases (invalid input, missing token, 404, 409)
+- Swagger handles quick visual checks; Postman handles scenario-based testing
 
 ---
 ## How to create the solution structure
@@ -122,5 +136,6 @@ Web-Bookstore-API-Refactor-v1/
 - [ ] Project references set correctly in .csproj
 - [ ] Folder structure created inside each project
 - [x] All naming conventions decided — documented in CLAUDE.md
-- [x] All technical decisions made (DTO, exceptions, JWT, testing) — documented in CLAUDE.md
+- [x] All technical decisions made (DTO, exceptions, JWT, testing, Swagger) — documented in CLAUDE.md
+- [ ] Swagger UI configured and accessible at https://localhost:7001/swagger
 - [ ] Ready to start Phase 3

@@ -30,6 +30,7 @@ Migrating from **ASP.NET Core MVC** to **Web API with 3-tier layered architectur
 - No service layer, no repository pattern, no DI abstraction
 - Cookie-based auth — not compatible with API clients
 - No logging, no global exception handling, no unit tests
+- Razor Views — not usable by API clients; replaced by Swagger UI
 
 **Target solution structure:**
 ```
@@ -115,6 +116,11 @@ Mapping lives in `ExceptionHandlingMiddleware` only. Services only `throw` — n
 
 **Logging:** `ILogger<T>` injected in all Services. Use `Information` for normal flow, `Warning` for unexpected situations, `Error` with exception for failures.
 
+**Swagger:** Swashbuckle.AspNetCore. Enabled in Development only.
+Replaces Razor Views as the visual interface for exploring and testing the API.
+All controllers must have XML doc comments on actions (`/// <summary>`).
+Use `[ProducesResponseType]` to document all response codes per endpoint.
+
 **Unit tests:** xUnit + Moq. Test files mirror Service structure under `Tests/Services/`. Pattern: Arrange → Act → Assert. Mock Repository interfaces — never use real DbContext. Focus on Services with business logic (`OrderService`, `CartService`, `ProductService`). Skip Repository and Controller tests.
 
 ---
@@ -135,6 +141,12 @@ dotnet test
 dotnet test --collect:"XPlat Code Coverage"
 dotnet ef migrations add <n> --project BookstoreWeb.Infrastructure --startup-project BookstoreWeb.API
 dotnet ef database update --project BookstoreWeb.Infrastructure --startup-project BookstoreWeb.API
+```
+
+After `dotnet run`:
+```
+API available at: https://localhost:7001
+Swagger UI at:    https://localhost:7001/swagger
 ```
 
 ---
