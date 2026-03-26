@@ -144,7 +144,7 @@ When starting a new phase, tell Claude Code to read the corresponding file:
 > "Read docs/phase-3-service.md before we start"
 
 ```
-docs/phase-2-solution-design.md     File structure, Solution design
+docs/phase-2-solution-design.md     F3-tier architecture, project boundaries, interface list, folder structure
 docs/phase-3-service.md             Service layer, Interface, DI
 docs/phase-4-repository.md          Repository pattern
 docs/phase-5-jwt.md                 JWT, Middleware, Logging
