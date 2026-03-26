@@ -132,10 +132,10 @@ Web-Bookstore-API-Refactor-v1/
 ---
 ## Checklist
 - [x] Architecture confirmed: 3-tier
-- [ ] All 4 projects created and added to solution
-- [ ] Project references set correctly in .csproj
-- [ ] Folder structure created inside each project
+- [x] All 4 projects created and added to solution
+- [x] Project references set correctly in .csproj
+- [x] Folder structure created inside each project
 - [x] All naming conventions decided — documented in CLAUDE.md
 - [x] All technical decisions made (DTO, exceptions, JWT, testing, Swagger) — documented in CLAUDE.md
-- [ ] Swagger UI configured and accessible at https://localhost:7001/swagger
-- [ ] Ready to start Phase 3
+- [x] Swagger UI configured and accessible at https://localhost:7001/swagger
+- [x] Ready to start Phase 3

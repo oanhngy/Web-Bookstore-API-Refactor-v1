@@ -50,7 +50,7 @@ API → Application → Infrastructure → Database
 
 **Refactor roadmap:**
 - [x] Phase 1 — Analyze codebase, identify pain points
-- [ ] Phase 2 — Design solution structure
+- [x] Phase 2 — Design solution structure
 - [ ] Phase 3 — Service layer + Interfaces + DI
 - [ ] Phase 4 — Repository pattern
 - [ ] Phase 5 — JWT auth + Global Exception Middleware + Logging
