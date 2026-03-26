@@ -176,7 +176,8 @@ Web-Bookstore-API-Refactor-v1/
    dotnet watch
    ```
 
-6. API is available at `https://localhost:7001`
+6. API available at: https://localhost:7001
+   Swagger UI at:    https://localhost:7001/swagger
 
 7. Default Admin account (seeded on first run):
    - **Email:** `admin@gmail.com`
