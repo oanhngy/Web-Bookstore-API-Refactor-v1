@@ -1,0 +1,7 @@
+namespace BookstoreWeb.Infrastructure.Data;
+
+public class Category
+{
+    public int    CategoryID { get; set; }
+    public string Name       { get; set; } = string.Empty;
+}
