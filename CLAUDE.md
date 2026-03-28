@@ -35,10 +35,15 @@ Migrating from **ASP.NET Core MVC** to **Web API with 3-tier layered architectur
 **Target solution structure:**
 ```
 BookstoreWeb.API/             Controllers, Middleware, Program.cs
-BookstoreWeb.Application/     Services, Interfaces, DTOs
+BookstoreWeb.Application/     Services, Interfaces, DTOs, DependencyInjection.cs
 BookstoreWeb.Infrastructure/  Repositories, Data, DependencyInjection.cs
 BookstoreWeb.Tests/           xUnit + Moq
 ```
+
+**DI registration rule:** Each layer registers what it owns.
+- `Application/DependencyInjection.cs` → Services (`AddApplicationServices()`)
+- `Infrastructure/DependencyInjection.cs` → Repositories (`AddInfrastructureServices()`)
+- Reason: Infrastructure cannot reference Application (would create circular dependency)
 
 **Dependency rule (never violate):**
 ```

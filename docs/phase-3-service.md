@@ -30,15 +30,39 @@ BookstoreWeb.Application/
     └── ...
 ```
 
-## DI Registration (Program.cs)
-Register all services with `Scoped` lifetime:
+## DI Registration
+
+DI registration is split across two files — each layer registers what it owns:
+
+**`Application/DependencyInjection.cs`** — registers Services (both interface and implementation live in Application):
 ```csharp
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IOrderService, OrderService>();
-builder.Services.AddScoped<ICartService, CartService>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IAccountService, AccountService>();
+public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+{
+    services.AddScoped<ICategoryService, CategoryService>();
+    services.AddScoped<IProductService, ProductService>();
+    services.AddScoped<ICartService, CartService>();
+    services.AddScoped<IOrderService, OrderService>();
+    services.AddScoped<IAdminOrderService, AdminOrderService>();
+    return services;
+}
 ```
+
+**`Infrastructure/DependencyInjection.cs`** — registers Repositories (Phase 4):
+```csharp
+public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
+{
+    // Repository registrations added in Phase 4
+    return services;
+}
+```
+
+**`Program.cs`** calls both:
+```csharp
+builder.Services.AddApplicationServices();    // Services
+builder.Services.AddInfrastructureServices(); // Repositories (Phase 4)
+```
+
+**Why split?** Infrastructure cannot reference Application (circular dependency — Application already references Infrastructure for domain models). Each layer only registers what it owns.
 
 ## What a thin Controller looks like after this phase
 ```csharp
@@ -80,9 +104,9 @@ private static ProductResponse ToResponse(Product product)
 
 ## Checklist before moving to Phase 4
 
-- [ ] All Service interfaces created in Application/Interfaces/
-- [ ] All Service implementations created in Application/Services/
-- [ ] All Services registered in Program.cs with Scoped lifetime
-- [ ] Controllers inject interfaces, not DbContext
-- [ ] No EF Core types referenced in Application project
-- [ ] DTOs created for all major entities
+- [x] All Service interfaces created in Application/Interfaces/
+- [x] All Service implementations created in Application/Services/
+- [ ] All Services registered in Program.cs with Scoped lifetime  ← đang làm (DependencyInjection.cs)
+- [ ] Controllers inject interfaces, not DbContext                 ← Phase 4
+- [x] No EF Core types referenced in Application project
+- [x] DTOs created for all major entities

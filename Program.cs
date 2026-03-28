@@ -1,70 +1,19 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using BookstoreWeb.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using BookstoreWeb.Application;
+using BookstoreWeb.Infrastructure;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder=WebApplication.CreateBuilder(args);
 
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
-builder.Logging.AddDebug();
-builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Information);
+//service từ App layer
+builder.Services.AddApplicationServices();
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+//rpeo từ Infras layer
+//phase 4 điền
+builder.Services.AddInfrastructureServices();
 
-builder.Services.AddDbContext<BookstoreContext>(options =>
-    options.UseMySql(
-    builder.Configuration.GetConnectionString("BookstoreDb"),
-    new MySqlServerVersion(new Version(8, 0, 0))
-    )
-           .EnableSensitiveDataLogging()
-           .LogTo(Console.WriteLine, LogLevel.Information));
+//cho .NET tìm + xài Controller class trong API
+builder.Services.AddControllers();
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<BookstoreContext>()
-    .AddDefaultTokenProviders();
-
-builder.Services.AddSession();
-builder.Services.AddControllersWithViews().AddSessionStateTempDataProvider();
-
-// Cấu hình SameSite và Secure Cookie
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.Cookie.SameSite = SameSiteMode.Lax;
-    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-    options.Cookie.HttpOnly = true;
-});
-
-var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    await SeedData.Initialize(services);
-}
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
+var app=builder.Build();
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
-app.UseSession();
-app.UseAuthentication();
-app.UseAuthorization();
-
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Product}/{action=Index}/{id?}");
-
-
+app.MapControllers();
 app.Run();
-
-

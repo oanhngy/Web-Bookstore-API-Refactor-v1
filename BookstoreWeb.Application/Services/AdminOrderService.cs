@@ -69,8 +69,7 @@ public class AdminOrderService : IAdminOrderService
                 .GroupBy(o=>o.OrderDate!.Value.ToString("yyyy-MM-dd"))
                 .Select(g=>new RevenueDataResponse
                 {
-                    Label=g.
-                    Key,
+                    Label=g.Key,
                     TotalRevenue=g.Sum(o=>o.TotalAmount??0)
                 }),
 
@@ -79,8 +78,7 @@ public class AdminOrderService : IAdminOrderService
                 .GroupBy(o=>o.OrderDate!.Value.ToString("yyyy-MM"))
                 .Select(g=>new RevenueDataResponse
                 {
-                    Label=g.
-                    Key,
+                    Label=g.Key,
                     TotalRevenue=g.Sum(o=>o.TotalAmount??0)
                 }),
 
@@ -89,8 +87,7 @@ public class AdminOrderService : IAdminOrderService
                 .GroupBy(o=>o.OrderDate!.Value.ToString("yyyy"))
                 .Select(g=>new RevenueDataResponse
                 {
-                    Label=g.
-                    Key,
+                    Label=g.Key,
                     TotalRevenue=g.Sum(o=>o.TotalAmount??0)
                 }),
 

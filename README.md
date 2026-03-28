@@ -106,14 +106,15 @@ Web-Bookstore-API-Refactor-v1/
 │   └── Program.cs        # DI registration, JWT config, middleware pipeline
 │
 ├── BookstoreWeb.Application/
-│   ├── Services/         # ProductService, OrderService, CartService, ...
-│   ├── Interfaces/       # IProductService, IOrderService, ...
-│   └── DTOs/             # Request/Response DTOs
+│   ├── Services/               # ProductService, OrderService, CartService, ...
+│   ├── Interfaces/             # IProductService, IOrderService, ...
+│   ├── DTOs/                   # Request/Response DTOs
+│   └── DependencyInjection.cs  # AddApplicationServices() — registers Services
 │
 ├── BookstoreWeb.Infrastructure/
-│   ├── Repositories/     # ProductRepository, OrderRepository, ...
-│   ├── Data/             # BookstoreContext, SeedData, Migrations
-│   └── DependencyInjection.cs
+│   ├── Repositories/           # ProductRepository, OrderRepository, ...
+│   ├── Data/                   # BookstoreContext, SeedData, Migrations
+│   └── DependencyInjection.cs  # AddInfrastructureServices() — registers Repositories
 │
 └── BookstoreWeb.Tests/
     └── Services/         # Unit tests — xUnit + Moq
