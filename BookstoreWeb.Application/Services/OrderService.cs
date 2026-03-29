@@ -1,7 +1,7 @@
 using BookstoreWeb.Application.DTOs.Orders;
 using BookstoreWeb.Application.Exceptions;
 using BookstoreWeb.Application.Interfaces;
-using BookstoreWeb.Infrastructure.Data;
+using BookstoreWeb.Application.Domain;
 using Microsoft.Extensions.Logging;
 namespace BookstoreWeb.Application.Services;
 

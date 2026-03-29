@@ -106,7 +106,6 @@ private static ProductResponse ToResponse(Product product)
 
 - [x] All Service interfaces created in Application/Interfaces/
 - [x] All Service implementations created in Application/Services/
-- [ ] All Services registered in Program.cs with Scoped lifetime  ← đang làm (DependencyInjection.cs)
-- [ ] Controllers inject interfaces, not DbContext                 ← Phase 4
+- [x] All Services registered in Program.cs with Scoped lifetime
 - [x] No EF Core types referenced in Application project
 - [x] DTOs created for all major entities

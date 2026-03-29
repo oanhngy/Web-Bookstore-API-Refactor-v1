@@ -1,4 +1,4 @@
-using BookstoreWeb.Infrastructure.Data;
+using BookstoreWeb.Application.Domain;
 namespace BookstoreWeb.Application.Interfaces;
 
 public interface IOrderRepository

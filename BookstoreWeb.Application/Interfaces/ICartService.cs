@@ -1,4 +1,5 @@
 using BookstoreWeb.Application.DTOs.Cart;
+namespace BookstoreWeb.Application.Interfaces;
 
 public interface ICartService
 {

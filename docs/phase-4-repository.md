@@ -6,16 +6,18 @@ After this phase, Services no longer know about EF Core or DbContext — they on
 
 ## What to create
 ```
+BookstoreWeb.Application/
+└── Interfaces/               ← Repository interfaces already created here (Phase 3)
+    ├── ICategoryRepository.cs
+    ├── IProductRepository.cs
+    └── IOrderRepository.cs
+
 BookstoreWeb.Infrastructure/
-├── Repositories/
-│   ├── Interfaces/           ← or put these in Application/Interfaces/
-│   │   ├── IProductRepository.cs
-│   │   ├── IOrderRepository.cs
-│   │   └── ICategoryRepository.cs
+├── Repositories/             ← implementations go here
+│   ├── CategoryRepository.cs
 │   ├── ProductRepository.cs
-│   ├── OrderRepository.cs
-│   └── CategoryRepository.cs
-└── DependencyInjection.cs    ← register repositories here
+│   └── OrderRepository.cs
+└── DependencyInjection.cs    ← AddInfrastructureServices() — register repositories here
 ```
 
 ## Method naming rule: [Verb][Noun][Condition]Async
@@ -34,34 +36,35 @@ public interface IProductRepository
 }
 ```
 
-## DI Registration (DependencyInjection.cs)
+## DI Registration (Infrastructure/DependencyInjection.cs)
+
+`AddInfrastructureServices()` already exists (created in Phase 3 as placeholder).
+Fill in repository + DbContext registrations:
 
 ```csharp
-public static class DependencyInjection
+public static IServiceCollection AddInfrastructureServices(
+    this IServiceCollection services, IConfiguration configuration)
 {
-    public static IServiceCollection AddInfrastructure(
-        this IServiceCollection services, IConfiguration configuration)
-    {
-        // DbContext
-        services.AddDbContext<BookstoreContext>(options =>
-            options.UseMySql(
-                configuration.GetConnectionString("DefaultConnection"),
-                ServerVersion.AutoDetect(configuration.GetConnectionString("DefaultConnection"))
-            ));
+    // DbContext — connects to MySQL via connection string in appsettings.json
+    services.AddDbContext<BookstoreContext>(options =>
+        options.UseMySql(
+            configuration.GetConnectionString("DefaultConnection"),
+            ServerVersion.AutoDetect(configuration.GetConnectionString("DefaultConnection"))
+        ));
 
-        // Repositories
-        services.AddScoped<IProductRepository, ProductRepository>();
-        services.AddScoped<IOrderRepository, OrderRepository>();
-        services.AddScoped<ICategoryRepository, CategoryRepository>();
+    // Repositories
+    services.AddScoped<ICategoryRepository, CategoryRepository>();
+    services.AddScoped<IProductRepository, ProductRepository>();
+    services.AddScoped<IOrderRepository, OrderRepository>();
 
-        return services;
-    }
+    return services;
 }
 ```
 
-Then in Program.cs, replace individual registrations with:
+Program.cs — pass configuration to AddInfrastructureServices:
 ```csharp
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices(builder.Configuration);
 ```
 
 ## What a Repository implementation looks like
@@ -98,9 +101,9 @@ public class ProductRepository : IProductRepository
 
 ## Checklist before moving to Phase 5
 
-- [ ] Repository interfaces created
-- [ ] Repository implementations created in Infrastructure project
-- [ ] All repositories registered in DependencyInjection.cs
-- [ ] Services updated — no more direct DbContext calls
-- [ ] DbContext and Migrations moved to Infrastructure/Data/
-- [ ] No EF Core references remain in Application project
+- [x] Repository interfaces created in Application/Interfaces/
+- [x] BookstoreContext created in Infrastructure/Data/
+- [x] Repository implementations created in Infrastructure/Repositories/
+- [x] All repositories registered in Infrastructure/DependencyInjection.cs
+- [x] Controllers created in API — inject Service interfaces, not DbContext
+- [x] dotnet build passes with 0 errors

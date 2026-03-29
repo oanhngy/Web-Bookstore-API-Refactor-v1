@@ -1,4 +1,5 @@
 using BookstoreWeb.Application.DTOs.Account;
+namespace BookstoreWeb.Application.Interfaces;
 
 public interface IAccountService
 {

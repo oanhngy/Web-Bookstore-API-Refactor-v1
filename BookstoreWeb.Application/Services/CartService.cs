@@ -2,7 +2,7 @@ using System.Security.Cryptography.X509Certificates;
 using BookstoreWeb.Application.DTOs.Cart;
 using BookstoreWeb.Application.Exceptions;
 using BookstoreWeb.Application.Interfaces;
-using BookstoreWeb.Infrastructure.Data;
+using BookstoreWeb.Application.Domain;
 using Microsoft.Extensions.Logging;
 namespace BookstoreWeb.Application.Services;
 

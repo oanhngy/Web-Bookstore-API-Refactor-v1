@@ -1,4 +1,5 @@
 using BookstoreWeb.Application.DTOs.Orders;
+namespace BookstoreWeb.Application.Interfaces;
 
 public interface IAdminOrderService
 {

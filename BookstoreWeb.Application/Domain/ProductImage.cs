@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BookstoreWeb.Infrastructure.Data;
+namespace BookstoreWeb.Application.Domain;
 
 public class ProductImage
 {

@@ -14,6 +14,7 @@ This is a **learning project**, understanding and skill improvement matter more 
 - If code changes are needed, propose the plan as simple bullet points first
 - Wait for my approval before applying any change
 - When multiple valid approaches exist, recommend one and explain why
+- When pointing out errors or issues: chỉ nêu line nào sửa gì — KHÔNG viết lại toàn bộ file
 
 **Coding rules:**
 - Every function and logic block must have a comment explaining what it does (not how)
