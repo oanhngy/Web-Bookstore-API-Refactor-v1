@@ -163,10 +163,10 @@ _logger.LogError(ex, "Failed to create product with name {Name}", request.Name);
 
 ## Checklist before moving to Phase 6
 
-- [ ] JWT configured in Program.cs with correct middleware order
-- [ ] Token generation implemented in AccountService
-- [ ] All 3 custom exception classes created in Application project
-- [ ] ExceptionHandlingMiddleware created and registered first in pipeline
-- [ ] ILogger<T> injected in all Service classes
-- [ ] Cookie-based auth removed
-- [ ] [Authorize] attributes updated on Controllers
+- [x] JWT configured in Program.cs with correct middleware order
+- [x] Token generation implemented in AccountService
+- [x] All 3 custom exception classes created in Application project
+- [x] ExceptionHandlingMiddleware created and registered first in pipeline
+- [ ] ILogger<T> injected in all Service classes (bỏ qua để demo nhanh)
+- [x] Cookie-based auth removed
+- [x] [Authorize] attributes updated on Controllers

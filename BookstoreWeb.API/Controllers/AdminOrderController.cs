@@ -2,7 +2,9 @@ using BookstoreWeb.Application.DTOs.Orders;
 using BookstoreWeb.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 namespace BookstoreWeb.API.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
+[Authorize]
 [ApiController]
 [Route("api/admin/orders")]
 public class AdminOrderController : ControllerBase

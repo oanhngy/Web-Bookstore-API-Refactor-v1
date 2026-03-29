@@ -1,6 +1,8 @@
 using BookstoreWeb.Application.Interfaces;
 using BookstoreWeb.Infrastructure.Data;
 using BookstoreWeb.Infrastructure.Repositories;
+using BookstoreWeb.Infrastructure.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +20,7 @@ public static class DependencyInjection
         ));
 
         //dky repository implementations
+        services.AddScoped<IAccountService, AccountService>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();

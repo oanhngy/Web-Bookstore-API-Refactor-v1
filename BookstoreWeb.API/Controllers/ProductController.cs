@@ -3,7 +3,9 @@ using BookstoreWeb.Application.DTOs.Products;
 using BookstoreWeb.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 namespace BookstoreWeb.API.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
+[Authorize]
 [ApiController]
 [Route("api/products")]
 public class ProductController : ControllerBase

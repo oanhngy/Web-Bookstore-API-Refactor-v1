@@ -1,8 +1,12 @@
 using BookstoreWeb.Application.DTOs.Cart;
 using BookstoreWeb.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
 namespace BookstoreWeb.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/cart")]
 public class CartController : ControllerBase

@@ -1,0 +1,2442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.40759999999999996" branch-rate="0.3703" version="1.9" timestamp="1774764871" lines-covered="223" lines-valid="547" branches-covered="40" branches-valid="108">
+  <sources>
+    <source>/Users/oanhngy/Documents/git/Web-Bookstore-API-Refactor-v1/BookstoreWeb.Application/</source>
+  </sources>
+  <packages>
+    <package name="BookstoreWeb.Application" line-rate="0.40759999999999996" branch-rate="0.3703" complexity="245">
+      <classes>
+        <class name="BookstoreWeb.Application.DependencyInjection" filename="DependencyInjection.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="AddApplicationServices" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.AdminOrderService" filename="Services/AdminOrderService.cs" line-rate="0" branch-rate="0" complexity="9">
+          <methods>
+            <method name="ToResponse" signature="(BookstoreWeb.Application.Domain.Order)" line-rate="0" branch-rate="0" complexity="8">
+              <lines>
+                <line number="102" hits="0" branch="False" />
+                <line number="103" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="144" type="jump" coverage="0%" />
+                    <condition number="192" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="104" hits="0" branch="False" />
+                <line number="105" hits="0" branch="False" />
+                <line number="106" hits="0" branch="False" />
+                <line number="107" hits="0" branch="False" />
+                <line number="108" hits="0" branch="False" />
+                <line number="109" hits="0" branch="False" />
+                <line number="110" hits="0" branch="False" />
+                <line number="111" hits="0" branch="False" />
+                <line number="112" hits="0" branch="False" />
+                <line number="113" hits="0" branch="False" />
+                <line number="114" hits="0" branch="False" />
+                <line number="115" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="39" type="jump" coverage="0%" />
+                    <condition number="51" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="116" hits="0" branch="False" />
+                <line number="117" hits="0" branch="False" />
+                <line number="118" hits="0" branch="False" />
+                <line number="119" hits="0" branch="False" />
+                <line number="120" hits="0" branch="False" />
+                <line number="121" hits="0" branch="False" />
+                <line number="122" hits="0" branch="False" />
+                <line number="123" hits="0" branch="False" />
+                <line number="124" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(BookstoreWeb.Application.Interfaces.IOrderRepository,Microsoft.Extensions.Logging.ILogger`1&lt;BookstoreWeb.Application.Services.AdminOrderService&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="102" hits="0" branch="False" />
+            <line number="103" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="144" type="jump" coverage="0%" />
+                <condition number="192" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="104" hits="0" branch="False" />
+            <line number="105" hits="0" branch="False" />
+            <line number="106" hits="0" branch="False" />
+            <line number="107" hits="0" branch="False" />
+            <line number="108" hits="0" branch="False" />
+            <line number="109" hits="0" branch="False" />
+            <line number="110" hits="0" branch="False" />
+            <line number="111" hits="0" branch="False" />
+            <line number="112" hits="0" branch="False" />
+            <line number="113" hits="0" branch="False" />
+            <line number="114" hits="0" branch="False" />
+            <line number="115" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="39" type="jump" coverage="0%" />
+                <condition number="51" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="116" hits="0" branch="False" />
+            <line number="117" hits="0" branch="False" />
+            <line number="118" hits="0" branch="False" />
+            <line number="119" hits="0" branch="False" />
+            <line number="120" hits="0" branch="False" />
+            <line number="121" hits="0" branch="False" />
+            <line number="122" hits="0" branch="False" />
+            <line number="123" hits="0" branch="False" />
+            <line number="124" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.AdminOrderService/&lt;GetAllAsync&gt;d__3" filename="Services/AdminOrderService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.AdminOrderService/&lt;GetByIdAsync&gt;d__4" filename="Services/AdminOrderService.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="206" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="206" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.AdminOrderService/&lt;GetRevenueDatasAsync&gt;d__6" filename="Services/AdminOrderService.cs" line-rate="0" branch-rate="0" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="65" hits="0" branch="True" condition-coverage="0% (0/6)">
+                  <conditions>
+                    <condition number="223" type="jump" coverage="0%" />
+                    <condition number="237" type="jump" coverage="0%" />
+                    <condition number="254" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="66" hits="0" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
+                <line number="84" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
+                <line number="93" hits="0" branch="False" />
+                <line number="94" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+                <line number="98" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="65" hits="0" branch="True" condition-coverage="0% (0/6)">
+              <conditions>
+                <condition number="223" type="jump" coverage="0%" />
+                <condition number="237" type="jump" coverage="0%" />
+                <condition number="254" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="66" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="84" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
+            <line number="93" hits="0" branch="False" />
+            <line number="94" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+            <line number="98" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.AdminOrderService/&lt;UpdateStatusAsync&gt;d__5" filename="Services/AdminOrderService.cs" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="232" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="410" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="232" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="410" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService" filename="Services/CartService.cs" line-rate="1" branch-rate="0.6" complexity="11">
+          <methods>
+            <method name="ToCartResponse" signature="(BookstoreWeb.Application.Domain.Order)" line-rate="1" branch-rate="0.6" complexity="10">
+              <lines>
+                <line number="150" hits="1" branch="False" />
+                <line number="151" hits="1" branch="True" condition-coverage="50% (3/6)">
+                  <conditions>
+                    <condition number="27" type="jump" coverage="50%" />
+                    <condition number="75" type="jump" coverage="50%" />
+                    <condition number="97" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="152" hits="1" branch="False" />
+                <line number="153" hits="1" branch="False" />
+                <line number="154" hits="2" branch="True" condition-coverage="75% (3/4)">
+                  <conditions>
+                    <condition number="39" type="jump" coverage="50%" />
+                    <condition number="51" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="155" hits="2" branch="False" />
+                <line number="156" hits="2" branch="False" />
+                <line number="157" hits="2" branch="False" />
+                <line number="158" hits="2" branch="False" />
+                <line number="159" hits="2" branch="False" />
+                <line number="160" hits="2" branch="False" />
+                <line number="161" hits="2" branch="False" />
+                <line number="162" hits="2" branch="False" />
+                <line number="163" hits="1" branch="False" />
+                <line number="164" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(BookstoreWeb.Application.Interfaces.IOrderRepository,BookstoreWeb.Application.Interfaces.IProductRepository,Microsoft.Extensions.Logging.ILogger`1&lt;BookstoreWeb.Application.Services.CartService&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="7" branch="False" />
+                <line number="19" hits="7" branch="False" />
+                <line number="20" hits="7" branch="False" />
+                <line number="21" hits="7" branch="False" />
+                <line number="22" hits="7" branch="False" />
+                <line number="23" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="150" hits="1" branch="False" />
+            <line number="151" hits="1" branch="True" condition-coverage="50% (3/6)">
+              <conditions>
+                <condition number="27" type="jump" coverage="50%" />
+                <condition number="75" type="jump" coverage="50%" />
+                <condition number="97" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="152" hits="1" branch="False" />
+            <line number="153" hits="1" branch="False" />
+            <line number="154" hits="2" branch="True" condition-coverage="75% (3/4)">
+              <conditions>
+                <condition number="39" type="jump" coverage="50%" />
+                <condition number="51" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="155" hits="2" branch="False" />
+            <line number="156" hits="2" branch="False" />
+            <line number="157" hits="2" branch="False" />
+            <line number="158" hits="2" branch="False" />
+            <line number="159" hits="2" branch="False" />
+            <line number="160" hits="2" branch="False" />
+            <line number="161" hits="2" branch="False" />
+            <line number="162" hits="2" branch="False" />
+            <line number="163" hits="1" branch="False" />
+            <line number="164" hits="1" branch="False" />
+            <line number="18" hits="7" branch="False" />
+            <line number="19" hits="7" branch="False" />
+            <line number="20" hits="7" branch="False" />
+            <line number="21" hits="7" branch="False" />
+            <line number="22" hits="7" branch="False" />
+            <line number="23" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;&gt;c__DisplayClass5_0" filename="Services/CartService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;AddToCartAsync&gt;b__0" signature="(BookstoreWeb.Application.Domain.OrderDetail)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="70" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="70" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;&gt;c__DisplayClass6_0" filename="Services/CartService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;RemoveFromCartAsync&gt;b__0" signature="(BookstoreWeb.Application.Domain.OrderDetail)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="99" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="99" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;&gt;c__DisplayClass7_0" filename="Services/CartService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;UpdateItemQuantityAsync&gt;b__0" signature="(BookstoreWeb.Application.Domain.OrderDetail)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="120" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="120" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;AddToCartAsync&gt;d__5" filename="Services/CartService.cs" line-rate="0.8" branch-rate="0.75" complexity="8">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.8" branch-rate="0.75" complexity="8">
+              <lines>
+                <line number="38" hits="3" branch="False" />
+                <line number="39" hits="3" branch="False" />
+                <line number="41" hits="3" branch="False" />
+                <line number="42" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="298" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="48" hits="2" branch="False" />
+                <line number="49" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="526" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
+                <line number="56" hits="1" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="62" hits="1" branch="False" />
+                <line number="63" hits="1" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="798" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="72" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="868" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
+                <line number="79" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
+                <line number="82" hits="0" branch="False" />
+                <line number="83" hits="0" branch="False" />
+                <line number="84" hits="0" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="87" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="38" hits="3" branch="False" />
+            <line number="39" hits="3" branch="False" />
+            <line number="41" hits="3" branch="False" />
+            <line number="42" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="298" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="48" hits="2" branch="False" />
+            <line number="49" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="526" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="56" hits="1" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="63" hits="1" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="798" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="72" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="868" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
+            <line number="79" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
+            <line number="82" hits="0" branch="False" />
+            <line number="83" hits="0" branch="False" />
+            <line number="84" hits="0" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="87" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;CheckoutCart&gt;d__8" filename="Services/CartService.cs" line-rate="1" branch-rate="0.6666" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="0.6666" complexity="6">
+              <lines>
+                <line number="129" hits="2" branch="False" />
+                <line number="130" hits="2" branch="False" />
+                <line number="131" hits="2" branch="False" />
+                <line number="132" hits="2" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="212" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="135" hits="3" branch="True" condition-coverage="75% (3/4)">
+                  <conditions>
+                    <condition number="236" type="jump" coverage="50%" />
+                    <condition number="264" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="139" hits="1" branch="False" />
+                <line number="140" hits="1" branch="False" />
+                <line number="142" hits="1" branch="False" />
+                <line number="143" hits="1" branch="False" />
+                <line number="145" hits="1" branch="False" />
+                <line number="146" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="129" hits="2" branch="False" />
+            <line number="130" hits="2" branch="False" />
+            <line number="131" hits="2" branch="False" />
+            <line number="132" hits="2" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="212" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="135" hits="3" branch="True" condition-coverage="75% (3/4)">
+              <conditions>
+                <condition number="236" type="jump" coverage="50%" />
+                <condition number="264" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="139" hits="1" branch="False" />
+            <line number="140" hits="1" branch="False" />
+            <line number="142" hits="1" branch="False" />
+            <line number="143" hits="1" branch="False" />
+            <line number="145" hits="1" branch="False" />
+            <line number="146" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;GetCartAsync&gt;d__4" filename="Services/CartService.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="201" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="201" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;RemoveFromCartAsync&gt;d__6" filename="Services/CartService.cs" line-rate="0" branch-rate="0" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="92" hits="0" branch="False" />
+                <line number="93" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="260" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="100" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="332" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="101" hits="0" branch="False" />
+                <line number="104" hits="0" branch="False" />
+                <line number="105" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="92" hits="0" branch="False" />
+            <line number="93" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="260" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="100" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="332" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="101" hits="0" branch="False" />
+            <line number="104" hits="0" branch="False" />
+            <line number="105" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CartService/&lt;UpdateItemQuantityAsync&gt;d__7" filename="Services/CartService.cs" line-rate="0.5555" branch-rate="0.375" complexity="8">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.5555" branch-rate="0.375" complexity="8">
+              <lines>
+                <line number="109" hits="2" branch="False" />
+                <line number="110" hits="2" branch="False" />
+                <line number="113" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="141" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="116" hits="1" branch="False" />
+                <line number="117" hits="2" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="303" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="121" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="375" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="123" hits="0" branch="False" />
+                <line number="124" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="109" hits="2" branch="False" />
+            <line number="110" hits="2" branch="False" />
+            <line number="113" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="141" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="116" hits="1" branch="False" />
+            <line number="117" hits="2" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="303" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="121" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="375" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="123" hits="0" branch="False" />
+            <line number="124" hits="0" branch="False" />
+            <line number="125" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CategoryService" filename="Services/CategoryService.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="ToResponse" signature="(BookstoreWeb.Application.Domain.Category)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="104" hits="0" branch="False" />
+                <line number="105" hits="0" branch="False" />
+                <line number="106" hits="0" branch="False" />
+                <line number="107" hits="0" branch="False" />
+                <line number="108" hits="0" branch="False" />
+                <line number="109" hits="0" branch="False" />
+                <line number="110" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(BookstoreWeb.Application.Interfaces.ICategoryRepository,Microsoft.Extensions.Logging.ILogger`1&lt;BookstoreWeb.Application.Services.CategoryService&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="104" hits="0" branch="False" />
+            <line number="105" hits="0" branch="False" />
+            <line number="106" hits="0" branch="False" />
+            <line number="107" hits="0" branch="False" />
+            <line number="108" hits="0" branch="False" />
+            <line number="109" hits="0" branch="False" />
+            <line number="110" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CategoryService/&lt;AddAsync&gt;d__5" filename="Services/CategoryService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CategoryService/&lt;DeleteAsync&gt;d__7" filename="Services/CategoryService.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="91" hits="0" branch="False" />
+                <line number="92" hits="0" branch="False" />
+                <line number="93" hits="0" branch="False" />
+                <line number="94" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="208" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+                <line number="97" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
+                <line number="100" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="91" hits="0" branch="False" />
+            <line number="92" hits="0" branch="False" />
+            <line number="93" hits="0" branch="False" />
+            <line number="94" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="208" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+            <line number="97" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
+            <line number="100" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CategoryService/&lt;GetAllAsync&gt;d__3" filename="Services/CategoryService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CategoryService/&lt;GetByIdAsync&gt;d__4" filename="Services/CategoryService.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="206" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="206" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.CategoryService/&lt;UpdateAsync&gt;d__6" filename="Services/CategoryService.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="73" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="217" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="74" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="83" hits="0" branch="False" />
+                <line number="86" hits="0" branch="False" />
+                <line number="87" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="73" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="217" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="74" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="83" hits="0" branch="False" />
+            <line number="86" hits="0" branch="False" />
+            <line number="87" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.OrderService" filename="Services/OrderService.cs" line-rate="0.7142000000000001" branch-rate="0.375" complexity="9">
+          <methods>
+            <method name="ToResponse" signature="(BookstoreWeb.Application.Domain.Order)" line-rate="0.6520999999999999" branch-rate="0.375" complexity="8">
+              <lines>
+                <line number="100" hits="1" branch="False" />
+                <line number="101" hits="1" branch="True" condition-coverage="75% (3/4)">
+                  <conditions>
+                    <condition number="144" type="jump" coverage="50%" />
+                    <condition number="192" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="102" hits="1" branch="False" />
+                <line number="103" hits="1" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="109" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="111" hits="1" branch="False" />
+                <line number="112" hits="1" branch="False" />
+                <line number="113" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="39" type="jump" coverage="0%" />
+                    <condition number="51" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="114" hits="0" branch="False" />
+                <line number="115" hits="0" branch="False" />
+                <line number="116" hits="0" branch="False" />
+                <line number="117" hits="0" branch="False" />
+                <line number="118" hits="0" branch="False" />
+                <line number="119" hits="0" branch="False" />
+                <line number="120" hits="0" branch="False" />
+                <line number="121" hits="1" branch="False" />
+                <line number="122" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(BookstoreWeb.Application.Interfaces.IOrderRepository,Microsoft.Extensions.Logging.ILogger`1&lt;BookstoreWeb.Application.Services.OrderService&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="7" branch="False" />
+                <line number="14" hits="7" branch="False" />
+                <line number="15" hits="7" branch="False" />
+                <line number="16" hits="7" branch="False" />
+                <line number="17" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="100" hits="1" branch="False" />
+            <line number="101" hits="1" branch="True" condition-coverage="75% (3/4)">
+              <conditions>
+                <condition number="144" type="jump" coverage="50%" />
+                <condition number="192" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="102" hits="1" branch="False" />
+            <line number="103" hits="1" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="109" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="111" hits="1" branch="False" />
+            <line number="112" hits="1" branch="False" />
+            <line number="113" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="39" type="jump" coverage="0%" />
+                <condition number="51" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="114" hits="0" branch="False" />
+            <line number="115" hits="0" branch="False" />
+            <line number="116" hits="0" branch="False" />
+            <line number="117" hits="0" branch="False" />
+            <line number="118" hits="0" branch="False" />
+            <line number="119" hits="0" branch="False" />
+            <line number="120" hits="0" branch="False" />
+            <line number="121" hits="1" branch="False" />
+            <line number="122" hits="1" branch="False" />
+            <line number="13" hits="7" branch="False" />
+            <line number="14" hits="7" branch="False" />
+            <line number="15" hits="7" branch="False" />
+            <line number="16" hits="7" branch="False" />
+            <line number="17" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.OrderService/&lt;CancelAsync&gt;d__5" filename="Services/OrderService.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="42" hits="4" branch="False" />
+                <line number="43" hits="4" branch="False" />
+                <line number="44" hits="4" branch="False" />
+                <line number="48" hits="4" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="222" type="jump" coverage="100%" />
+                    <condition number="251" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="49" hits="2" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="57" hits="2" branch="False" />
+                <line number="58" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="430" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="62" hits="1" branch="False" />
+                <line number="63" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="42" hits="4" branch="False" />
+            <line number="43" hits="4" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="48" hits="4" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="222" type="jump" coverage="100%" />
+                <condition number="251" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="49" hits="2" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="57" hits="2" branch="False" />
+            <line number="58" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="430" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="63" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.OrderService/&lt;ConfirmAsync&gt;d__6" filename="Services/OrderService.cs" line-rate="0.3333" branch-rate="0.5" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.3333" branch-rate="0.5" complexity="6">
+              <lines>
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="72" hits="1" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="222" type="jump" coverage="50%" />
+                    <condition number="253" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="73" hits="0" branch="False" />
+                <line number="74" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="80" hits="2" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="395" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="85" hits="0" branch="False" />
+                <line number="86" hits="0" branch="False" />
+                <line number="87" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
+                <line number="89" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
+                <line number="92" hits="0" branch="False" />
+                <line number="93" hits="0" branch="False" />
+                <line number="94" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="72" hits="1" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="222" type="jump" coverage="50%" />
+                <condition number="253" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="73" hits="0" branch="False" />
+            <line number="74" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="80" hits="2" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="395" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="85" hits="0" branch="False" />
+            <line number="86" hits="0" branch="False" />
+            <line number="87" hits="0" branch="False" />
+            <line number="88" hits="0" branch="False" />
+            <line number="89" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
+            <line number="92" hits="0" branch="False" />
+            <line number="93" hits="0" branch="False" />
+            <line number="94" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.OrderService/&lt;GetByIdAsync&gt;d__4" filename="Services/OrderService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="29" hits="2" branch="False" />
+                <line number="30" hits="2" branch="False" />
+                <line number="31" hits="2" branch="False" />
+                <line number="32" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="206" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="2" branch="False" />
+            <line number="30" hits="2" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="206" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.OrderService/&lt;GetByUserIdAsync&gt;d__3" filename="Services/OrderService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService" filename="Services/ProductService.cs" line-rate="0.7777" branch-rate="0.5" complexity="7">
+          <methods>
+            <method name="ToResponse" signature="(BookstoreWeb.Application.Domain.Product)" line-rate="0.7272" branch-rate="0.5" complexity="6">
+              <lines>
+                <line number="156" hits="1" branch="False" />
+                <line number="157" hits="1" branch="True" condition-coverage="50% (3/6)">
+                  <conditions>
+                    <condition number="92" type="jump" coverage="50%" />
+                    <condition number="117" type="jump" coverage="50%" />
+                    <condition number="165" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="158" hits="1" branch="False" />
+                <line number="159" hits="1" branch="False" />
+                <line number="160" hits="1" branch="False" />
+                <line number="161" hits="1" branch="False" />
+                <line number="162" hits="1" branch="False" />
+                <line number="163" hits="1" branch="False" />
+                <line number="164" hits="1" branch="False" />
+                <line number="165" hits="1" branch="False" />
+                <line number="166" hits="1" branch="False" />
+                <line number="167" hits="1" branch="False" />
+                <line number="168" hits="1" branch="False" />
+                <line number="169" hits="1" branch="False" />
+                <line number="170" hits="0" branch="False" />
+                <line number="171" hits="0" branch="False" />
+                <line number="172" hits="0" branch="False" />
+                <line number="173" hits="0" branch="False" />
+                <line number="174" hits="0" branch="False" />
+                <line number="175" hits="0" branch="False" />
+                <line number="176" hits="1" branch="False" />
+                <line number="177" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(BookstoreWeb.Application.Interfaces.IProductRepository,Microsoft.Extensions.Logging.ILogger`1&lt;BookstoreWeb.Application.Services.ProductService&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="4" branch="False" />
+                <line number="19" hits="4" branch="False" />
+                <line number="20" hits="4" branch="False" />
+                <line number="21" hits="4" branch="False" />
+                <line number="22" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="156" hits="1" branch="False" />
+            <line number="157" hits="1" branch="True" condition-coverage="50% (3/6)">
+              <conditions>
+                <condition number="92" type="jump" coverage="50%" />
+                <condition number="117" type="jump" coverage="50%" />
+                <condition number="165" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="158" hits="1" branch="False" />
+            <line number="159" hits="1" branch="False" />
+            <line number="160" hits="1" branch="False" />
+            <line number="161" hits="1" branch="False" />
+            <line number="162" hits="1" branch="False" />
+            <line number="163" hits="1" branch="False" />
+            <line number="164" hits="1" branch="False" />
+            <line number="165" hits="1" branch="False" />
+            <line number="166" hits="1" branch="False" />
+            <line number="167" hits="1" branch="False" />
+            <line number="168" hits="1" branch="False" />
+            <line number="169" hits="1" branch="False" />
+            <line number="170" hits="0" branch="False" />
+            <line number="171" hits="0" branch="False" />
+            <line number="172" hits="0" branch="False" />
+            <line number="173" hits="0" branch="False" />
+            <line number="174" hits="0" branch="False" />
+            <line number="175" hits="0" branch="False" />
+            <line number="176" hits="1" branch="False" />
+            <line number="177" hits="1" branch="False" />
+            <line number="18" hits="4" branch="False" />
+            <line number="19" hits="4" branch="False" />
+            <line number="20" hits="4" branch="False" />
+            <line number="21" hits="4" branch="False" />
+            <line number="22" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService/&lt;&gt;c" filename="Services/ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;AddAsync&gt;b__5_0" signature="(BookstoreWeb.Application.DTOs.Products.ProductImageData)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="76" hits="0" branch="False" />
+                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
+                <line number="79" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="76" hits="0" branch="False" />
+            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
+            <line number="79" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService/&lt;&gt;c__DisplayClass6_0" filename="Services/ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;UpdateAsync&gt;b__0" signature="(BookstoreWeb.Application.Domain.ProductImage)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="115" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="115" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService/&lt;AddAsync&gt;d__5" filename="Services/ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
+                <line number="74" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="82" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
+                <line number="86" hits="0" branch="False" />
+                <line number="87" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
+            <line number="74" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="82" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
+            <line number="86" hits="0" branch="False" />
+            <line number="87" hits="0" branch="False" />
+            <line number="88" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService/&lt;DeleteAsync&gt;d__7" filename="Services/ProductService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="143" hits="2" branch="False" />
+                <line number="144" hits="2" branch="False" />
+                <line number="145" hits="2" branch="False" />
+                <line number="146" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="208" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="147" hits="1" branch="False" />
+                <line number="148" hits="1" branch="False" />
+                <line number="149" hits="1" branch="False" />
+                <line number="151" hits="1" branch="False" />
+                <line number="152" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="143" hits="2" branch="False" />
+            <line number="144" hits="2" branch="False" />
+            <line number="145" hits="2" branch="False" />
+            <line number="146" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="208" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="147" hits="1" branch="False" />
+            <line number="148" hits="1" branch="False" />
+            <line number="149" hits="1" branch="False" />
+            <line number="151" hits="1" branch="False" />
+            <line number="152" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService/&lt;GetAllAsync&gt;d__3" filename="Services/ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService/&lt;GetByIdAsync&gt;d__4" filename="Services/ProductService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="47" hits="2" branch="False" />
+                <line number="48" hits="2" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="206" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="52" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="47" hits="2" branch="False" />
+            <line number="48" hits="2" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="206" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="52" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Services.ProductService/&lt;UpdateAsync&gt;d__6" filename="Services/ProductService.cs" line-rate="0" branch-rate="0" complexity="10">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="10">
+              <lines>
+                <line number="93" hits="0" branch="False" />
+                <line number="94" hits="0" branch="False" />
+                <line number="97" hits="0" branch="False" />
+                <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="248" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="99" hits="0" branch="False" />
+                <line number="100" hits="0" branch="False" />
+                <line number="101" hits="0" branch="False" />
+                <line number="105" hits="0" branch="False" />
+                <line number="106" hits="0" branch="False" />
+                <line number="107" hits="0" branch="False" />
+                <line number="108" hits="0" branch="False" />
+                <line number="109" hits="0" branch="False" />
+                <line number="112" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="511" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="118" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="586" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="119" hits="0" branch="False" />
+                <line number="120" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="695" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="121" hits="0" branch="False" />
+                <line number="123" hits="0" branch="False" />
+                <line number="124" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+                <line number="128" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="890" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="129" hits="0" branch="False" />
+                <line number="130" hits="0" branch="False" />
+                <line number="131" hits="0" branch="False" />
+                <line number="132" hits="0" branch="False" />
+                <line number="133" hits="0" branch="False" />
+                <line number="134" hits="0" branch="False" />
+                <line number="135" hits="0" branch="False" />
+                <line number="136" hits="0" branch="False" />
+                <line number="137" hits="0" branch="False" />
+                <line number="138" hits="0" branch="False" />
+                <line number="139" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="93" hits="0" branch="False" />
+            <line number="94" hits="0" branch="False" />
+            <line number="97" hits="0" branch="False" />
+            <line number="98" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="248" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="99" hits="0" branch="False" />
+            <line number="100" hits="0" branch="False" />
+            <line number="101" hits="0" branch="False" />
+            <line number="105" hits="0" branch="False" />
+            <line number="106" hits="0" branch="False" />
+            <line number="107" hits="0" branch="False" />
+            <line number="108" hits="0" branch="False" />
+            <line number="109" hits="0" branch="False" />
+            <line number="112" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="511" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="118" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="586" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="119" hits="0" branch="False" />
+            <line number="120" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="695" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="121" hits="0" branch="False" />
+            <line number="123" hits="0" branch="False" />
+            <line number="124" hits="0" branch="False" />
+            <line number="125" hits="0" branch="False" />
+            <line number="128" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="890" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="129" hits="0" branch="False" />
+            <line number="130" hits="0" branch="False" />
+            <line number="131" hits="0" branch="False" />
+            <line number="132" hits="0" branch="False" />
+            <line number="133" hits="0" branch="False" />
+            <line number="134" hits="0" branch="False" />
+            <line number="135" hits="0" branch="False" />
+            <line number="136" hits="0" branch="False" />
+            <line number="137" hits="0" branch="False" />
+            <line number="138" hits="0" branch="False" />
+            <line number="139" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Exceptions.ConflictException" filename="Exceptions/ConflictException.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+                <line number="7" hits="0" branch="False" />
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Exceptions.NotFoundException" filename="Exceptions/NotFoundException.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="7" branch="False" />
+                <line number="7" hits="7" branch="False" />
+                <line number="9" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="7" branch="False" />
+            <line number="7" hits="7" branch="False" />
+            <line number="9" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Exceptions.ValidationException" filename="Exceptions/ValidationException.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="4" branch="False" />
+                <line number="7" hits="4" branch="False" />
+                <line number="9" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="4" branch="False" />
+            <line number="7" hits="4" branch="False" />
+            <line number="9" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Products.CreateProductRequest" filename="DTOs/Products/CreateProductRequest.cs" line-rate="0" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Author" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Images" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Products.ProductImageData" filename="DTOs/Products/ProductImageData.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_Data" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_FileName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_IsPrimary" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Products.ProductImageResponse" filename="DTOs/Products/ProductImageResponse.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_ImageID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImagePath" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_IsPrimary" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Products.ProductResponse" filename="DTOs/Products/ProductResponse.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_ProductID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Author" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Images" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="2" branch="False" />
+            <line number="7" hits="3" branch="False" />
+            <line number="8" hits="1" branch="False" />
+            <line number="9" hits="1" branch="False" />
+            <line number="10" hits="1" branch="False" />
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Products.UpdateProductRequest" filename="DTOs/Products/UpdateProductRequest.cs" line-rate="0" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Author" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Images" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DeleteImageIds" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PrimaryImageId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Orders.ConfirmOrderRequest" filename="DTOs/Orders/ConfirmOrderRequest.cs" line-rate="0.8332999999999999" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_FullName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Email" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Phone" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Address" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Note" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PaymentMethod" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="2" branch="False" />
+            <line number="10" hits="2" branch="False" />
+            <line number="12" hits="2" branch="False" />
+            <line number="14" hits="2" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="17" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Orders.OrderDetailResponse" filename="DTOs/Orders/OrderDetailResponse.cs" line-rate="0" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_OrderDetailId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UnitPrice" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Subtotal" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Orders.OrderResponse" filename="DTOs/Orders/OrderResponse.cs" line-rate="1" branch-rate="1" complexity="11">
+          <methods>
+            <method name="get_OrderId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Status" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalAmount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_FullName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Email" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Phone" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Address" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Note" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PaymentMethod" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderDetails" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="2" branch="False" />
+            <line number="7" hits="3" branch="False" />
+            <line number="8" hits="1" branch="False" />
+            <line number="9" hits="1" branch="False" />
+            <line number="10" hits="1" branch="False" />
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Orders.RevenueDataResponse" filename="DTOs/Orders/RevenueDataResponse.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Label" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalRevenue" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Orders.UpdateOrderStatusRequest" filename="DTOs/Orders/UpdateOrderStatusRequest.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Status" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Common.PagedResponse`1" filename="DTOs/Common/PagedResponse.cs" line-rate="0" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Items" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Page" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageSize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalCount" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalPages" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Categories.CategoryResponse" filename="DTOs/Categories/CategoryResponse.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_CategoryID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Categories.CreateCategoryRequest" filename="DTOs/Categories/CreateCategoryRequest.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Categories.UpdateCategoryRequest" filename="DTOs/Categories/UpdateCategoryRequest.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Cart.AddToCartRequest" filename="DTOs/Cart/AddToCartRequest.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="11" branch="False" />
+            <line number="11" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Cart.CartItemResponse" filename="DTOs/Cart/CartItemResponse.cs" line-rate="0.8332999999999999" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_OrderDetailId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UnitPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Subtotal" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="2" branch="False" />
+            <line number="6" hits="2" branch="False" />
+            <line number="7" hits="4" branch="False" />
+            <line number="8" hits="2" branch="False" />
+            <line number="9" hits="2" branch="False" />
+            <line number="10" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Cart.CartResponse" filename="DTOs/Cart/CartResponse.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_OrderId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Items" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalAmount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="1" branch="False" />
+            <line number="6" hits="2" branch="False" />
+            <line number="7" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Account.LoginRequest" filename="DTOs/Account/LoginRequest.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Password" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Account.LoginResponse" filename="DTOs/Account/LoginResponse.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_Token" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Role" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.DTOs.Account.RegisterRequest" filename="DTOs/Account/RegisterRequest.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Password" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Domain.Category" filename="Domain/Category.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_CategoryID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Domain.Order" filename="Domain/Order.cs" line-rate="1" branch-rate="1" complexity="12">
+          <methods>
+            <method name="get_OrderID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UserID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Status" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="28" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalAmount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_FullName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Email" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Phone" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Address" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Note" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PaymentMethod" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderDetails" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="15" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="10" branch="False" />
+            <line number="6" hits="22" branch="False" />
+            <line number="7" hits="28" branch="False" />
+            <line number="8" hits="2" branch="False" />
+            <line number="9" hits="3" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="20" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Domain.OrderDetail" filename="Domain/OrderDetail.cs" line-rate="0.7142000000000001" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_OrderDetailID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UnitPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Order" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Product" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="2" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="5" branch="False" />
+            <line number="8" hits="13" branch="False" />
+            <line number="11" hits="10" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Domain.Product" filename="Domain/Product.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_ProductID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Author" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryID" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Category" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductImages" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="5" branch="False" />
+            <line number="6" hits="6" branch="False" />
+            <line number="7" hits="1" branch="False" />
+            <line number="8" hits="1" branch="False" />
+            <line number="9" hits="5" branch="False" />
+            <line number="10" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="BookstoreWeb.Application.Domain.ProductImage" filename="Domain/ProductImage.cs" line-rate="0" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_ImageID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductID" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImagePath" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_IsPrimary" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageType" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Product" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
