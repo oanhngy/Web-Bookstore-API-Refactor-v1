@@ -121,8 +121,8 @@ No hard coverage target — focus on testing logic that matters, not chasing a p
 
 ## Checklist before moving to Phase 7
 
-- [ ] Test project created with xUnit and Moq packages
-- [ ] Test classes created for OrderService, CartService, ProductService
-- [ ] Each test follows Arrange → Act → Assert pattern
-- [ ] All tests pass — `dotnet test` shows green
-- [ ] No real DbContext used in any test
+- [x] Test project created with xUnit and Moq packages
+- [x] Test classes created for OrderService, CartService, ProductService
+- [x] Each test follows Arrange → Act → Assert pattern
+- [x] All tests pass — `dotnet test` shows green
+- [x] No real DbContext used in any test

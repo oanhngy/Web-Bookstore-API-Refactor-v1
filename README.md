@@ -123,7 +123,7 @@ Web-Bookstore-API-Refactor-v1/
 ---
 ## 7. Technologies Used
 - Language: C#
-- Framework: ASP.NEt Core Web API (.NET 8)
+- Framework: ASP.NET Core Web API (.NET 10)
 - Database: MySQL - Pomelo EF Core provider
 - ORM: Entity Framework Core (code first)
 - Authentication: JWT Bearer
@@ -134,7 +134,7 @@ Web-Bookstore-API-Refactor-v1/
 ## 8. Installation & Run Guide
 
 ### Prerequisites
-- .NET 6 SDK
+- .NET 10 SDK
 - MySQL Server
 - VS Code (or any editor)
 
@@ -167,8 +167,7 @@ Web-Bookstore-API-Refactor-v1/
 
 4. Run EF Core Migrations
    ```bash
-   cd BookstoreWeb.Infrastructure
-   dotnet ef database update --startup-project ../BookstoreWeb.API
+   dotnet ef database update --project BookstoreWeb.Infrastructure --startup-project BookstoreWeb.API
    ```
 
 5. Run the API
@@ -186,8 +185,7 @@ Web-Bookstore-API-Refactor-v1/
 
 ### Run Unit Tests
 ```bash
-cd BookstoreWeb.Tests
-dotnet test
+dotnet test BookstoreWeb.sln
 ```
 
 ---

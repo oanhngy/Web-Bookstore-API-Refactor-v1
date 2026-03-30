@@ -13,3 +13,10 @@ wwwroot/images/*
 
 ## Environment
 appsettings.Development.json
+
+## Sensitive files
+password.txt
+
+## Auto-generated reports
+coverage-report/
+**/TestResults/
